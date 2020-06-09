@@ -1,6 +1,8 @@
-name: clean_flutter
+name: bloc_pattern
 description: A new Flutter project.
 
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
@@ -21,19 +23,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # Service locator
-  get_it: ^2.0.1
-  # Bloc for state management
-  flutter_bloc: ^4.0.0
-  # Value equality
-  equatable: ^1.2.0
-  # Functional programming thingies
-  dartz: ^0.9.1
-  # Remote API
-  connectivity: ^0.4.8+6
-  http: ^0.12.1
-  # Local cache
-  shared_preferences: ^0.5.7+3
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -43,7 +32,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mockito: ^4.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
