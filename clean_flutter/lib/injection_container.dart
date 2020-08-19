@@ -13,8 +13,23 @@ import 'features/number_trivia/domain/use_cases/get_concrete_number_trivia.dart'
 import 'features/number_trivia/domain/use_cases/get_random_number_trivia.dart';
 import 'features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 
+extension AddSupportModule on GetIt {
+  void addHelpModule() {
+    registerFactory(
+      () => NumberTriviaBloc(
+        concrete: sl(),
+        random: sl(),
+        inputConverter: sl(),
+      ),
+    );
+  }
+}
+
 // Service Locator (sl)
 final sl = GetIt.instance;
+
+sl.addHelpModule();
+
 
 Future<void> init() async {
   // Features - Number Trivia
